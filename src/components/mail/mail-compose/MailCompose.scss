@@ -1,0 +1,21 @@
+.mailCompose {
+    margin: 50px 30px;
+    #editor {
+        border: 1px solid #c4c4c4;
+        min-height: 200px;
+    }
+    &__header {
+        margin-bottom: 30px;
+    }
+    .formControl {
+        width: 100%;
+    }
+    .buttonSend {
+        margin-top: 10px;
+        .iconButton {
+            transform: rotate(325deg);
+            margin-left: 5px;
+            margin-top: -5px;
+        }
+    }
+}
