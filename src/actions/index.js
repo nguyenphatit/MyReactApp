@@ -110,31 +110,3 @@ export const actionCheckOutCart = () => {
         type: Types.CHECK_OUT,
     }
 }
-
-export const actionFetchUserReq = () => {
-    return (dispatch) => {
-        return callAPI('GET', 'users', null).then(res => {
-            dispatch(actionFetchUsers(res.data));
-        });
-    }
-}
-
-const actionFetchUsers = (users) => {
-    return {
-        type: Types.FETCH_USER,
-        users
-    }
-}
-
-export const actionLogin = (user) => {
-    return {
-        type: Types.LOG_IN,
-        user
-    }
-}
-
-export const actionLogout = () => {
-    return {
-        type: Types.LOG_OUT
-    }
-}

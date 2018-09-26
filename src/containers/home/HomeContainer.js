@@ -5,16 +5,15 @@ import { connect } from 'react-redux';
 class HomeContainer extends Component {
 
     render() {
-        const { user } = this.props;
         return (
-            <Home user={user} />
+            <Home />
         );
     }
 }
 
 const mapStateToProps = state => {
     return {
-        user: state.login
+
     }
 }
 

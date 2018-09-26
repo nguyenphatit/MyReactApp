@@ -5,9 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
-import MenuIcon from '@material-ui/icons/Menu';
 import DialpadIcon from '@material-ui/icons/Dialpad';
-import MailIcon from '@material-ui/icons/Mail';
 import Drawer from '@material-ui/core/Drawer';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -15,13 +13,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
-import { Badge, Divider, Hidden, Menu, Avatar, Tooltip } from '@material-ui/core';
+import { Badge, Divider, Hidden, Menu } from '@material-ui/core';
 import BookIcon from '@material-ui/icons/Book';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShopIcon from '@material-ui/icons/Shop';
 import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import SendIcon from '@material-ui/icons/Send';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
@@ -94,16 +91,12 @@ class Header extends Component {
 
     render() {
         const { classes, cart } = this.props;
-        const { user } = this.state;
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         return (
             <React.Fragment>
                 <AppBar color="primary" position="fixed" className={classes.root}>
                     <Toolbar>
-                        <IconButton className={classes.menuButton} onClick={this.toggleDrawer('left', true)} color="inherit" aria-label="Menu">
-                            <MenuIcon />
-                        </IconButton>
                         <Typography variant="title" color="inherit" noWrap className={classes.grow}>
                             React App
             			</Typography>
@@ -127,23 +120,6 @@ class Header extends Component {
                                         </Badge>
                                     </IconButton>
                                 </NavLink>
-                                <NavLink to="/mail">
-                                    <IconButton className={classes.menuItem}>
-                                        <Badge color="secondary" badgeContent="0" className={classes.margin}>
-                                            <MailIcon />
-                                        </Badge>
-                                    </IconButton>
-                                </NavLink>
-                                <NavLink to="/logout">
-                                    <IconButton className={classes.menuItem}>
-                                        <ExitToAppIcon />
-                                    </IconButton>
-                                </NavLink>
-                                <Tooltip title={`${user.firstname} ${user.lastname}`} placement="bottom-start">
-                                    <IconButton className={classes.menuItem}>
-                                        <Avatar alt={`${user.firstname} ${user.lastname}`} src={user.avatar} className={classes.avatar} />
-                                    </IconButton>
-                                </Tooltip>
                             </Hidden>
                             <Hidden mdUp>
                                 <IconButton
@@ -191,27 +167,7 @@ class Header extends Component {
                                             <ListItemText primary="Cart" />
                                         </ListItem>
                                     </NavLink>
-                                    <NavLink to="/mail" className={classes.navlink} onClick={() => this.handleClose()}>
-                                        <ListItem button>
-                                            <ListItemIcon>
-                                                <Badge color="primary" badgeContent="0" className={classes.margin}>
-                                                    <MailIcon />
-                                                </Badge>
-                                            </ListItemIcon>
-                                            <ListItemText primary="Mail" />
-                                        </ListItem>
-                                    </NavLink>
                                 </Menu>
-                                <NavLink to="/logout">
-                                    <IconButton className={classes.menuItem}>
-                                        <ExitToAppIcon />
-                                    </IconButton>
-                                </NavLink>
-                                <Tooltip title={`${user.firstname} ${user.lastname}`} placement="bottom-start">
-                                    <IconButton className={classes.menuItem}>
-                                        <Avatar alt={`${user.firstname} ${user.lastname}`} src={user.avatar} className={classes.avatar} />
-                                    </IconButton>
-                                </Tooltip>
                             </Hidden>
                         </div>
                     </Toolbar>
