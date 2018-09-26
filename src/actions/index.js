@@ -1,6 +1,72 @@
 import * as Types from './../constants/ActionType';
 import callAPI from './../utils/apiCaller';
 
+export const actionFetchTasks = (tasks) => {
+    return {
+        type: Types.FETCH_TASK,
+        tasks
+    }
+}
+
+export const actionFetchTasksReq = () => {
+    return (dispatch) => {
+        return callAPI('GET', 'tasks', null).then(res => {
+            dispatch(actionFetchTasks(res.data));
+        })
+    }
+}
+
+export const actionAddTask = (task) => {
+    return {
+        type: Types.ADD_TASK,
+        task
+    }
+}
+
+export const actionAddTaskReq = (task) => {
+    if (task.id) {
+        console.log("Edit")
+    } else {
+        return (dispatch) => {
+            return callAPI('POST', 'tasks', task).then(res => {
+                dispatch(actionAddTask(res.data));
+            })
+        }
+    }
+}
+
+export const actionChangeStatusReq = (id, status) => {
+    return (dispatch) => {
+        return callAPI('PUT', `/tasks/${id}`, {
+            status: !status
+        }).then(res => {
+            dispatch(actionChangeStatus(res.data));
+        })
+    }
+}
+
+export const actionChangeStatus = (task) => {
+    return {
+        type: Types.CHANGE_STATUS,
+        task
+    }
+}
+
+export const actionDeleteTaskReq = (id) => {
+    return (dispatch) => {
+        return callAPI('DELETE', `/tasks/${id}`, null).then(res => {
+            dispatch(actionDeleteTask(res.data));
+        })
+    }
+}
+
+const actionDeleteTask = (task) => {
+    return {
+        type: Types.DELETE_TASK,
+        task
+    }
+}
+
 export const actionFetchProducts = (products) => {
     return {
         type: Types.FETCH_PRODUCT,

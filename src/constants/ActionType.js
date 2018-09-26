@@ -1,3 +1,9 @@
+export const FETCH_TASK = 'FETCH_TASK';
+export const ADD_TASK = 'ADD_TASK';
+export const CHANGE_STATUS = 'CHANG_STATUS';
+export const DELETE_TASK = 'DELETE_TASK';
+export const GET_TASK_BY_ID = 'GET_TASK_BY_ID';
+export const UPDATE_TASK = 'UPDATE_TASK';
 export const FETCH_PRODUCT = 'FETCH_PRODUCT';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const DELETE_PRODUCT_IN_CART = 'DELETE_PRODUCT_IN_CART';

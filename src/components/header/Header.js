@@ -16,6 +16,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
 import { Badge, Divider, Hidden, Menu, Avatar, Tooltip } from '@material-ui/core';
+import BookIcon from '@material-ui/icons/Book';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShopIcon from '@material-ui/icons/Shop';
 import InboxIcon from '@material-ui/icons/Inbox';
@@ -35,6 +36,11 @@ const NAV_LINK = [
         name: 'Home',
         exact: true,
         icon: <HomeIcon />
+    }, {
+        path: '/todo-list',
+        name: 'Todo List',
+        exact: true,
+        icon: <BookIcon />
     }, {
         path: '/shop',
         name: 'Shop',

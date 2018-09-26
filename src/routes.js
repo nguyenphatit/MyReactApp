@@ -12,12 +12,17 @@ import EmptyLayout from './layout/EmptyLayout';
 import LoginContainer from './containers/login/LoginContainer';
 import LogoutContainer from './containers/logout/LogoutContainer';
 import HomeContainer from './containers/home/HomeContainer';
+import TaskContainer from './containers/tasks/TaskContainer';
 
 const routes = [
     {
         path: '/',
         exact: true,
         main: () => <MainLayout><HomeContainer /></MainLayout>
+    }, {
+        path: '/todo-list',
+        exact: false,
+        main: () => <MainLayout><TaskContainer /></MainLayout>
     }, {
         path: '/shop',
         exact: false,

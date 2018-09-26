@@ -1,0 +1,45 @@
+.TodoList {
+    transition: 1s all;
+    &__header {
+        padding: 5px 10px;
+        .button-control {
+            font-size: 1px;
+            padding: 8px 8px;
+            margin-right: 3px;
+            border-radius: 50%;
+        }
+        .control-1 {
+            background: rgb(233, 81, 81);
+        }
+        .control-2 {
+            background: rgb(244, 247, 71);
+        }
+        .control-3 {
+            background: rgb(91, 243, 86);
+        }
+    }
+    .add-task {
+        transition: 1s all;
+        .formAdd {
+            padding: 10px 30px 30px 30px;
+            .form-control {
+                width: 100%;
+            }
+            .mt-2 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .TodoList {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .TodoList {
+        min-width: 370px;
+    }
+}
