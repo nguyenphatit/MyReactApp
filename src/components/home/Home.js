@@ -5,21 +5,7 @@ import { Typography, Grow } from '@material-ui/core';
 
 class Home extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            user: []
-        }
-    }
-
-    componentDidMount() {
-        this.setState({
-            user: JSON.parse(localStorage.getItem('__user'))
-        })
-    }
-
     render() {
-        const { user } = this.state
         return (
             <Grid container spacing={16}>
                 <Grow
@@ -31,7 +17,7 @@ class Home extends Component {
                     <Grid item xs={12}>
                         <Paper>
                             <Typography variant="display1" style={{ padding: '10px 10px' }} gutterBottom>
-                                Hello {user.firstname}
+                                Hello
                             </Typography>
                         </Paper>
                     </Grid>

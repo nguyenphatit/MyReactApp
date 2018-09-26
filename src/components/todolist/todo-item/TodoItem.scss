@@ -1,0 +1,29 @@
+.TodoItem {
+    position: relative;
+    transition: .5s all;
+    .avatar {
+        transition: 1s all;
+    }
+    &__func {
+        display: none;
+        top: 10px;
+        transition: 2s all;
+        right: 10px;
+        background-color: #ccc;
+        position: absolute;
+        margin: -10px;
+        padding: 10px;
+    }
+    &:hover {
+        border-inline-start: 5px solid #2196f3;
+        background: #ccc;
+        & .TodoItem__func {
+            display: block;
+        }
+        .avatar {
+            transition: 1s all;
+            background: #2196f3;
+            color: #fff;
+        }
+    }
+}
