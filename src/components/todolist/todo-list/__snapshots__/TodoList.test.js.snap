@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator Component matches the snapshot 1`] = `
+<div
+  className="MuiGrid-container-01 MuiGrid-direction-xs-column-04 MuiGrid-align-items-xs-center-09"
+  style={
+    Object {
+      "marginTop": "100px",
+    }
+  }
+>
+  <div
+    className="MuiGrid-item-02 MuiGrid-grid-sm-12-055 TodoList"
+  >
+    <div
+      className="MuiPaper-root-098 MuiPaper-elevation2-0102 MuiPaper-rounded-099"
+    >
+      <div
+        className="MuiGrid-container-01 TodoList__header"
+      >
+        <div
+          align="left"
+          className="MuiGrid-item-02 MuiGrid-grid-xs-6-035"
+        >
+          <span
+            className="button-control control-1"
+          />
+          <span
+            className="button-control control-2"
+          />
+          <span
+            className="button-control control-3"
+          />
+        </div>
+        <div
+          align="right"
+          className="MuiGrid-item-02 MuiGrid-grid-xs-6-035"
+        >
+          <button
+            aria-label="Collapse"
+            className="MuiButtonBase-root-0151 MuiButton-root-0125 MuiButton-contained-0136 MuiButton-containedPrimary-0137 MuiButton-raised-0139 MuiButton-raisedPrimary-0140"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-0126"
+            >
+              Add task
+            </span>
+            <span
+              className="MuiTouchRipple-root-0154"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        className="MuiCollapse-container-0161"
+        style={
+          Object {
+            "display": "none",
+            "minHeight": "0px",
+            "transition": "1s all",
+          }
+        }
+      >
+        <div
+          className="MuiCollapse-wrapper-0163"
+        >
+          <div
+            className="MuiCollapse-wrapperInner-0164"
+          >
+            <div
+              className="add-task"
+            >
+              <hr
+                className="MuiDivider-root-0165"
+              />
+              <form
+                className="formAdd"
+                onSubmit={[Function]}
+              >
+                <div>
+                  <div
+                    aria-describedby={undefined}
+                    className="MuiFormControl-root-0169 MuiFormControl-marginNormal-0170 form-control"
+                  >
+                    <label
+                      className="MuiFormLabel-root-0178 MuiInputLabel-root-0173 MuiInputLabel-formControl-0174 MuiInputLabel-animated-0177"
+                      data-shrink={false}
+                      htmlFor="standard-name"
+                    >
+                      Name
+                    </label>
+                    <div
+                      className="MuiInput-root-0185 MuiInput-formControl-0186 MuiInput-underline-0189"
+                    >
+                      <input
+                        aria-invalid={false}
+                        autoComplete={undefined}
+                        autoFocus={undefined}
+                        className="MuiInput-input-0193"
+                        defaultValue={undefined}
+                        disabled={false}
+                        id="standard-name"
+                        name="name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={undefined}
+                        onKeyUp={undefined}
+                        placeholder={undefined}
+                        readOnly={undefined}
+                        required={false}
+                        rows={undefined}
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    className="MuiFormControlLabel-root-0198"
+                  >
+                    <span
+                      className="MuiSwitch-root-0202"
+                    >
+                      <span
+                        className="MuiButtonBase-root-0151 MuiIconButton-root-0215 MuiSwitchBase-root-0211 MuiSwitch-switchBase-0205 MuiSwitch-colorPrimary-0207"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        role={undefined}
+                        tabIndex={null}
+                      >
+                        <span
+                          className="MuiIconButton-label-0220"
+                        >
+                          <span
+                            className="MuiSwitch-icon-0203"
+                          />
+                          <input
+                            autoFocus={undefined}
+                            checked=""
+                            className="MuiSwitchBase-input-0214"
+                            disabled={undefined}
+                            id={undefined}
+                            name="status"
+                            onChange={[Function]}
+                            readOnly={undefined}
+                            required={undefined}
+                            tabIndex={undefined}
+                            type="checkbox"
+                            value={undefined}
+                          />
+                        </span>
+                        <span
+                          className="MuiTouchRipple-root-0154"
+                        />
+                      </span>
+                      <span
+                        className="MuiSwitch-bar-0210"
+                      />
+                    </span>
+                    <span
+                      className="MuiTypography-root-0221 MuiTypography-body1-0230 MuiFormControlLabel-label-0201"
+                    >
+                      Done
+                    </span>
+                  </label>
+                </div>
+                <div>
+                  <div
+                    aria-describedby="filled-select-priority-native-helper-text"
+                    className="MuiFormControl-root-0169 MuiFormControl-marginNormal-0170 form-control"
+                    variant="filled"
+                  >
+                    <label
+                      className="MuiFormLabel-root-0178 MuiFormLabel-filled-0182 MuiInputLabel-root-0173 MuiInputLabel-formControl-0174 MuiInputLabel-animated-0177 MuiInputLabel-shrink-0176"
+                      data-shrink={true}
+                      htmlFor="filled-select-priority-native"
+                    >
+                      Priority select
+                    </label>
+                    <div
+                      className="MuiInput-root-0185 MuiInput-formControl-0186 MuiInput-underline-0189"
+                    >
+                      <div
+                        className="MuiSelect-root-0246"
+                      >
+                        <select
+                          aria-invalid={false}
+                          autoComplete={undefined}
+                          autoFocus={undefined}
+                          className="MuiSelect-select-0247 MuiInput-input-0193"
+                          defaultValue={undefined}
+                          disabled={false}
+                          id="filled-select-priority-native"
+                          name="priority"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={undefined}
+                          onKeyUp={undefined}
+                          placeholder={undefined}
+                          readOnly={undefined}
+                          required={false}
+                          rows={undefined}
+                          type={undefined}
+                          value={false}
+                        >
+                          <option
+                            value={false}
+                          >
+                            Low
+                          </option>
+                          <option
+                            value={true}
+                          >
+                            High
+                          </option>
+                        </select>
+                        <svg
+                          aria-hidden="true"
+                          className="MuiSvgIcon-root-0251 MuiSelect-icon-0250"
+                          color={undefined}
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <p
+                      className="MuiFormHelperText-root-0258 MuiFormHelperText-filled-0263"
+                      id="filled-select-priority-native-helper-text"
+                    >
+                      Please select your priority
+                    </p>
+                  </div>
+                </div>
+                <div
+                  align="right"
+                  className="mt-2"
+                >
+                  <button
+                    className="MuiButtonBase-root-0151 MuiButton-root-0125 MuiButton-contained-0136 MuiButton-containedPrimary-0137 MuiButton-raised-0139 MuiButton-raisedPrimary-0140"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex="0"
+                    type="submit"
+                  >
+                    <span
+                      className="MuiButton-label-0126"
+                    >
+                      Save
+                    </span>
+                    <span
+                      className="MuiTouchRipple-root-0154"
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr
+        className="MuiDivider-root-0165"
+      />
+      <ul
+        className="MuiList-root-0265 MuiList-padding-0266"
+      />
+    </div>
+  </div>
+</div>
+`;

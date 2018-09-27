@@ -181,85 +181,83 @@ class Calculator extends Component {
     render() {
         const { displayValue } = this.state;
         return (
-            <div>
-                <div className="calculator">
-                    {/* <div className="calculator__display auto-scaling-text">{displayValue.length < 11 ? displayValue : <span className="message_error"># max chars (X_X)!</span>}</div> */}
-                    {/* <div className="calculator__display auto-scaling-text"> */}
-                    <CalculatorDisplay value={displayValue} />
-                    {/* </div> */}
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <button className="calculator__key calculator__func" onClick={() => this.inputClear()}>AC</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__func" onClick={() => this.toggleSign()}>±</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__func" onClick={() => this.inputPercent()}>%</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__oper" onClick={() => this.operation('/')}>÷</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(7)}>7</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(8)}>8</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(9)}>9</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__oper" onClick={() => this.operation('*')}>x</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(4)}>4</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(5)}>5</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(6)}>6</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__oper" onClick={() => this.operation('-')}>-</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(1)}>1</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(2)}>2</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDigit(3)}>3</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__oper" onClick={() => this.operation('+')}>+</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan="2">
-                                    <button className="calculator__key calculator__key0" onClick={() => this.inputDigit(0)}>0</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key" onClick={() => this.inputDot()}>.</button>
-                                </td>
-                                <td>
-                                    <button className="calculator__key calculator__oper" onClick={() => this.operation('=')}>=</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div >
+            <div className="calculator">
+                {/* <div className="calculator__display auto-scaling-text">{displayValue.length < 11 ? displayValue : <span className="message_error"># max chars (X_X)!</span>}</div> */}
+                {/* <div className="calculator__display auto-scaling-text"> */}
+                <CalculatorDisplay value={displayValue} />
+                {/* </div> */}
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button className="calculator__key calculator__func" onClick={() => this.inputClear()}>AC</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__func" onClick={() => this.toggleSign()}>±</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__func" onClick={() => this.inputPercent()}>%</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__oper" onClick={() => this.operation('/')}>÷</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(7)}>7</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(8)}>8</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(9)}>9</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__oper" onClick={() => this.operation('*')}>x</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(4)}>4</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(5)}>5</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(6)}>6</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__oper" onClick={() => this.operation('-')}>-</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(1)}>1</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(2)}>2</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDigit(3)}>3</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__oper" onClick={() => this.operation('+')}>+</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan="2">
+                                <button className="calculator__key calculator__key0" onClick={() => this.inputDigit(0)}>0</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key" onClick={() => this.inputDot()}>.</button>
+                            </td>
+                            <td>
+                                <button className="calculator__key calculator__oper" onClick={() => this.operation('=')}>=</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         );
     }
 }

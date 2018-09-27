@@ -30,7 +30,6 @@ class TodoList extends Component {
         })
     }
 
-
     render() {
         let { checkShowForm } = this.state;
         return (
