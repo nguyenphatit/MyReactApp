@@ -69,24 +69,12 @@ class Header extends Component {
         this.setState({ anchorEl: null });
     };
 
-    toggleDrawer = (side, open) => () => {
-        this.setState({
-            [side]: open,
-        });
-    };
-
     showQuantity = (cart) => {
         var sum = 0;
         for (let i = 0; i < cart.length; i++) {
             sum += cart[i].quantity;
         }
         return sum;
-    }
-
-    componentDidMount() {
-        this.setState({
-            user: JSON.parse(localStorage.getItem('__user'))
-        })
     }
 
     render() {
@@ -172,61 +160,6 @@ class Header extends Component {
                         </div>
                     </Toolbar>
                 </AppBar>
-                <Drawer
-                    variant="temporary"
-                    anchor="left"
-                    open={this.state.left}
-                    onClose={this.toggleDrawer('left', false)}
-                    classes={{
-                        paper: classes.drawerPaper,
-                    }}
-                >
-                    <List>
-                        <NavLink to="/mail/compose" className={classes.navlink} onClick={() => this.handleClose()}>
-                            <button className="newMail">
-                                <AddIcon className="iconNewMail" />
-                                Compose
-                            </button>
-                        </NavLink>
-                    </List>
-                    <List>
-                        <NavLink to="/mail" className={classes.navlink} onClick={() => this.handleClose()}>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <InboxIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Inbox" />
-                            </ListItem>
-                        </NavLink>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <DraftsIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <SendIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Send" />
-                        </ListItem>
-                    </List>
-                    <Divider />
-                    <List>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <DeleteIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Delete" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <ReportIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Spam" />
-                        </ListItem>
-                    </List>
-                </Drawer>
             </React.Fragment>
         );
     }
@@ -252,12 +185,6 @@ const styles = {
     navlink: {
         textDecoration: 'none',
         outline: 0
-    },
-    drawerPaper: {
-        position: 'relative',
-        width: 240,
-    },
-    avatar: {
     }
 };
 

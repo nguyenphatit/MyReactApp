@@ -12,7 +12,6 @@
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
     "babel-preset-react-app": "^3.1.2",
     "babel-runtime": "6.26.0",
@@ -34,7 +33,6 @@
     "html-webpack-plugin": "2.29.0",
     "i": "^0.3.6",
     "install": "^0.12.1",
-    "jest": "20.0.4",
     "jquery": "^3.3.1",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.21",
@@ -52,6 +50,7 @@
     "react-moment": "^0.7.9",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.5.2",
     "recompose": "^0.30.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
@@ -76,7 +75,8 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/src/setupTests.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
@@ -114,6 +114,11 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-preset-airbnb": "^2.6.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^20.0.4",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   }
